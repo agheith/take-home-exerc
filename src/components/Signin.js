@@ -50,8 +50,8 @@ class Signin extends Component {
 				  <SingInForm onSubmit={this.onSubmit}>
 						<Invalid>{this.props.errorMessage}</Invalid>
 						<FormTitle>Sign in</FormTitle>
-					  <UserInput type="text" name="username" placeholder="Username" onChange={(e) => this.handleChangeInput(e)} />
-					  <PasswordInput type="password" name="password" value={password} placeholder="Password" onChange={(e) => this.handleChangeInput(e)} />
+					  <UserInput type="text" name="username" placeholder="Username" onChange={this.handleChangeInput} />
+					  <PasswordInput type="password" name="password" placeholder="Password" onChange={this.handleChangeInput} />
 						{(username.length > 0 && password.length > 0) ? <FormSubmit type="submit" value="Sign In" /> : null}
 					 </SingInForm>
 				 </FormContainer>
